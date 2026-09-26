@@ -1,0 +1,8 @@
+{
+  "peak_mb_s": 25.0,
+  "optimal_threads": 4,
+  "tolerance": 0.40,
+  "min_allowed_mb_s": 10.0,
+  "description": "Cross-platform CI throughput gate (Ubuntu & Windows runners)",
+  "created_at": "2026-08-21 01:25:00"
+}

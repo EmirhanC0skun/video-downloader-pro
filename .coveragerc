@@ -1,0 +1,20 @@
+[run]
+source = .
+omit =
+    main.py
+    android_app/*
+    tests/*
+    build/*
+    dist/*
+    benchmark.py
+    build_exe.py
+    run_tests.py
+
+[report]
+show_missing = True
+skip_covered = False
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:

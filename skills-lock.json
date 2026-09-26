@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "playwright-stealth-verify": {
+      "source": "liarjsdev/liarjs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/playwright-stealth-verify/SKILL.md",
+      "computedHash": "0b4e1cca47133694ee33a49406fd3bd2fe1c32334c93a931e3ef311815f17c57"
+    }
+  }
+}

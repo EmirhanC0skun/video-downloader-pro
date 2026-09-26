@@ -1,0 +1,44 @@
+[project]
+name = "videodownloaderpro"
+version = "2.8.0"
+description = "Universal Video, Movie & Social Media Downloader for Android"
+authors = [
+    { name = "Emirhan Coşkun" }
+]
+dependencies = [
+    "flet>=0.86.5",
+    "vdpro-android-bridge",
+    "requests>=2.31.0",
+    "urllib3>=2.0.0",
+    "certifi>=2024.2.2",
+    "pycryptodome>=3.20.0",
+    "yt-dlp>=2024.0.0",
+    "tqdm>=4.67.0",
+]
+
+[tool.flet]
+app_name = "Video Downloader Pro"
+org = "com.videodownloaderpro"
+product = "VideoDownloaderPro"
+company = "VideoDownloaderPro"
+copyright = "Copyright (C) 2026"
+
+[tool.flet.dev_packages]
+vdpro-android-bridge = "extensions/vdpro_android_bridge"
+
+[tool.flet.android]
+package_name = "com.videodownloaderpro.videodownloaderpro"
+version_code = 9
+version_name = "2.8.0"
+min_sdk_version = 24
+target_sdk_version = 34
+
+[tool.flet.android.permission]
+"android.permission.INTERNET" = true
+"android.permission.ACCESS_NETWORK_STATE" = true
+"android.permission.FOREGROUND_SERVICE" = true
+"android.permission.FOREGROUND_SERVICE_DATA_SYNC" = true
+"android.permission.POST_NOTIFICATIONS" = true
+"android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" = true
+"android.permission.WAKE_LOCK" = true
+"android.permission.WRITE_EXTERNAL_STORAGE" = { maxSdkVersion = 29 }

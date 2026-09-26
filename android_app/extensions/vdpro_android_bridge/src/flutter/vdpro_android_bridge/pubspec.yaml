@@ -1,0 +1,28 @@
+name: vdpro_android_bridge
+description: Video Downloader Pro Android native bridge
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.10.0 <4.0.0"
+  flutter: ">=3.38.1"
+
+dependencies:
+  flet: ^0.86.5
+  flutter:
+    sdk: flutter
+  flutter_foreground_task: ^11.0.3
+  gal: ^2.3.3
+  open_filex: ^4.7.0
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.videodownloaderpro.bridge
+        pluginClass: VdproAndroidBridgePlugin

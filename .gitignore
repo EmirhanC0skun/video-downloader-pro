@@ -1,0 +1,89 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+!android_app/extensions/vdpro_android_bridge/src/flutter/vdpro_android_bridge/lib/
+!android_app/extensions/vdpro_android_bridge/src/flutter/vdpro_android_bridge/lib/**
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller & Executables
+*.manifest
+*.spec
+# Depoda izlenen tek spec dosyasi (D4)
+!VideoDownloaderPro.spec
+*.exe
+
+# Flet & Flutter Mobile Build Artifacts
+android_app/build/
+android_app/.dart_tool/
+android_app/.flutter-plugins
+android_app/.flutter-plugins-dependencies
+android_app/.packages
+*.apk
+*.aab
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Media & Downloaded Test Files
+*.mp4
+*.mp3
+*.mkv
+*.wav
+*.ts
+*.part
+*.ytdl
+*.vtt
+*.srt
+*.tmp
+tests/test_scratch/
+test_downloads/
+test_mobile_downloads/
+ux_test_sandbox/
+benchmark_downloads/
+test_matrix_sandbox/
+local_private/
+.agents/
+
+# Logs & Databases
+*.log
+history.json
+# Test kapsam ciktilari
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/

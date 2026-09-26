@@ -1,0 +1,10 @@
+# Android (Flet) çalışma zamanı bağımlılıkları
+# Kök requirements.txt ile aynı çekirdek kümeyi kapsar; masaüstü arayüz paketleri hariç.
+flet>=0.86.5
+-e ./extensions/vdpro_android_bridge
+requests>=2.31.0
+urllib3>=2.0.0
+certifi>=2024.2.2
+pycryptodome>=3.20.0
+yt-dlp>=2024.0.0
+tqdm>=4.67.0

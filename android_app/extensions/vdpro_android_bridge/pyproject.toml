@@ -1,0 +1,18 @@
+[project]
+name = "vdpro-android-bridge"
+version = "0.1.0"
+description = "Video Downloader Pro Android MediaStore and foreground service bridge"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=0.86.5",
+]
+
+[tool.setuptools.package-data]
+"flutter.vdpro_android_bridge" = ["**/*"]
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
