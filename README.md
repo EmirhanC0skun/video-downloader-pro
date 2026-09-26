@@ -1,7 +1,7 @@
 # Video Downloader Pro 🎬⚡
 ### High-Performance Distributed Media Processing, Modular MVC & Dual-Core Engine
 
-[![CI Tests & Regression Suite](https://img.shields.io/badge/tests-238%20passed-brightgreen.svg)](#)
+[![CI Tests & Regression Suite](https://img.shields.io/badge/tests-360%20passed-brightgreen.svg)](#)
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
 [![Platform Coverage](https://img.shields.io/badge/platforms-15%2F15%2012--segment%20smoke-brightgreen.svg)](#)
 [![Architecture](https://img.shields.io/badge/architecture-Modular%20MVC%20%7C%20Dual--Core%200--Byte%20Sync-orange.svg)](#)
@@ -171,16 +171,16 @@ python tools/live_stream_smoke_test.py
 python tools/live_stream_smoke_test.py --site filmmodu --segments 12 --workers 4
 ```
 
-Her kod değişikliğinden sonra çalıştırılan 17-site canlı regresyon kapısı:
+Her kod değişikliğinden sonra çalıştırılan 15-site canlı regresyon kapısı:
 
 ```powershell
-# 17 ayrı gerçek URL çözümleme testi
-$env:RUN_LIVE_17 = "1"
-python -m pytest -q -m live17 -k resolves
+# 15 ayrı gerçek URL çözümleme testi
+$env:RUN_LIVE_15 = "1"
+python -m pytest -q -m live15 -k resolves
 
-# 17 ayrı gerçek medya testi; site başına tek temsilci akışta yaklaşık 50 MiB
+# 15 ayrı gerçek medya testi; site başına tek temsilci akışta yaklaşık 50 MiB
 $env:LIVE_DOWNLOAD_MIB = "50"
-python -m pytest -q -m live17 -k downloads
+python -m pytest -q -m live15 -k downloads
 ```
 
 Canlı testler varsayılan unit suite içinde ağ erişimine çıkmaz ve `skipped` görünür.
@@ -276,7 +276,7 @@ video-downloader-pro/
 │   ├── live_stream_smoke_test.py  # 15 platformluk sınırlı 12-segment canlı smoke testi
 │   └── build_ui_fonts.py          # İkon ve tipografi alt kümeleme aracı
 │
-└── tests/                         # Kapsamlı Test ve Regresyon Süiti (238 Test)
+└── tests/                         # Kapsamlı Test ve Regresyon Süiti (360 başarılı test)
     ├── test_real_ffmpeg_mux.py        # Fiziksel FFmpeg muxing ve MP4 konteyner bütünlük testi
     ├── test_audit_regressions.py      # Kod denetim bulguları ve kararlılık testleri
     ├── test_unit_pure_functions.py    # Saf ayrıştırıcı fonksiyon birim testleri
@@ -295,7 +295,7 @@ video-downloader-pro/
 
 ## 🧪 Kalite Güvencesi ve Test Doğrulaması
 
-Projede tüm modüller çevrimdışı (offline) deterministik testler ve 1 adet tam fiziksel FFmpeg entegrasyon testi içeren **238 adet birim ve regresyon testi** ile korunmaktadır:
+Son doğrulamada proje genelinde **360 test başarılı**, **30 canlı ağ testi isteğe bağlı olduğu için atlandı** ve **146 parametrik alt test başarılı** oldu. Paket ayrıca fiziksel FFmpeg entegrasyon testleriyle korunmaktadır:
 
 ```bash
 # Tüm test süitini çalıştır

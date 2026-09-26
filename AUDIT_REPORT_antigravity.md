@@ -47,7 +47,7 @@ AST (Soyut Sözdizimi Ağacı) analizcisi ile tüm kod tabanında tanımlanan s�
    - Tanımlandığı dosya içinde ve tüm projede hiçbir yerden çağrılmamaktadır. Yerine `:165` satırındaki `_source_keys` kullanılmaktadır.
 
 3. **`tools/live_smoke_test.py` ve `tools/live_full_test.py` (Mükerrer Test Betikleri):**
-   - Projenin yeni test harness'ı (`tests/test_live_17_sites.py`) yazıldıktan sonra kök dizinde unutulmuş, import-time yan etkileri olan eski test betikleridir.
+   - Projenin yeni test harness'ı (`tests/test_live_15_sites.py`) yazıldıktan sonra kök dizinde unutulmuş, import-time yan etkileri olan eski test betikleridir.
 
 ### 1.2. Projede Tanımlanmış Fakat Hiçbir Yerden Çağrılmayan Fonksiyonlar
 
@@ -251,7 +251,7 @@ collected 338 items
 
 ### 5.3. Mock / Sahte Test Tuzakları
 1. **Canlı Sitelerin Test Dışı Bırakılması (34 Skipped Test):**
-   - `tests/test_live_17_sites.py` dosyasındaki 34 testin tamamı varsayılan koşumda atlanmaktadır (`skipped`). Gerekçe: Canlı ağ isteklerinin CI/CD sürelerini uzatması ve sitelerin IP engellemesi uygulamasıdır. Ancak bu durum, platformların HTML veya player değiştirdiği gün testlerin bunu yakalayamaması anlamına gelir.
+   - `tests/test_live_15_sites.py` dosyasındaki 30 testin tamamı varsayılan koşumda atlanmaktadır (`skipped`). Gerekçe: Canlı ağ isteklerinin CI/CD sürelerini uzatması ve sitelerin IP engellemesi uygulamasıdır. Ancak bu durum, platformların HTML veya player değiştirdiği gün testlerin bunu yakalayamaması anlamına gelir.
 2. **Sentetik String Mocking:**
    - HLS master playlist testleri (`test_p0_hls_resolution.py`, `test_p0_audio_master.py`) gerçek CDN'lerden gelen bozuk veya geçersiz chunk'ları değil, elle yazılmış kusursuz `#EXTM3U` metinlerini test etmektedir.
    - Gerçek dünyada Cloudflare'in HTTP 200 içinde döndürdüğü JavaScript Challenge sayfaları mock testlerin kapsamı dışındadır.
@@ -293,7 +293,7 @@ Senior Auditor bakış açısıyla, projenin mevcut durumu sıfır tolerans filt
 2. **`engine_core/downloader.py` İçindeki Ölü ve Hackli Kodlar:**
    - **Gerekçe:** `if False and (` bloğu (satır 449-473) tamamen ölüdür ve çöptür. Satır 513-515'teki `executor._max_workers = boost_workers` hack'i CPython standardına aykırıdır; dinamik concurrency kontrolü bir kuyruk semaforu (`asyncio.Semaphore` veya `threading.BoundedSemaphore`) ile yönetilmelidir.
 3. **`tools/live_smoke_test.py` ve `tools/live_full_test.py`:**
-   - **Gerekçe:** Projenin resmi test paketi `tests/test_live_17_sites.py` ile mükerrerdir. İki başlılık yaratmakta, import anında yan etkiler üretmekte ve bakım yükü oluşturmaktadır.
+   - **Gerekçe:** Projenin resmi test paketi `tests/test_live_15_sites.py` ile mükerrerdir. İki başlılık yaratmakta, import anında yan etkiler üretmekte ve bakım yükü oluşturmaktadır.
 
 ---
 

@@ -1,4 +1,4 @@
-"""Opt-in field gate: 17 real resolvers and 17 bounded media downloads."""
+"""Opt-in field gate: 15 real resolvers and 15 bounded media downloads."""
 
 from __future__ import annotations
 
@@ -22,14 +22,14 @@ def _load_smoke_tool():
 TOOL = _load_smoke_tool()
 TARGETS = TOOL.TARGETS
 TARGET_IDS = [target["name"] for target in TARGETS]
-LIVE_ENABLED = os.environ.get("RUN_LIVE_17") == "1"
+LIVE_ENABLED = os.environ.get("RUN_LIVE_15") == "1"
 DOWNLOAD_MIB = int(os.environ.get("LIVE_DOWNLOAD_MIB", "50"))
 
 pytestmark = [
-    pytest.mark.live17,
+    pytest.mark.live15,
     pytest.mark.skipif(
         not LIVE_ENABLED,
-        reason="Set RUN_LIVE_17=1 to execute real external-site checks",
+        reason="Set RUN_LIVE_15=1 to execute real external-site checks",
     ),
 ]
 
